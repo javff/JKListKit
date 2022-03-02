@@ -7,25 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F219C8D27C396FA00E8E951 /* BaseSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F219C8C27C396FA00E8E951 /* BaseSectionController.swift */; };
-		8F219C8F27C3976400E8E951 /* BaseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F219C8E27C3976400E8E951 /* BaseSection.swift */; };
-		8F219C9127C3988500E8E951 /* SectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F219C9027C3988500E8E951 /* SectionAdapter.swift */; };
 		8FF0AEAF27BEEDE7003DAB1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEAE27BEEDE7003DAB1B /* AppDelegate.swift */; };
 		8FF0AEB127BEEDE7003DAB1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB027BEEDE7003DAB1B /* SceneDelegate.swift */; };
 		8FF0AEB327BEEDE7003DAB1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB227BEEDE7003DAB1B /* ViewController.swift */; };
 		8FF0AEB627BEEDE7003DAB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB427BEEDE7003DAB1B /* Main.storyboard */; };
 		8FF0AEB827BEEDE8003DAB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB727BEEDE8003DAB1B /* Assets.xcassets */; };
 		8FF0AEBB27BEEDE8003DAB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB927BEEDE8003DAB1B /* LaunchScreen.storyboard */; };
-		8FF0AEC627BEEDE8003DAB1B /* JKListKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEC527BEEDE8003DAB1B /* JKListKitTests.swift */; };
-		8FF0AED027BEEDE8003DAB1B /* JKListKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AECF27BEEDE8003DAB1B /* JKListKitUITests.swift */; };
-		8FF0AED227BEEDE8003DAB1B /* JKListKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AED127BEEDE8003DAB1B /* JKListKitUITestsLaunchTests.swift */; };
-		8FF0AEE127BEEEBC003DAB1B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEE027BEEEBC003DAB1B /* ListView.swift */; };
-		8FF0AEE327BEEFDA003DAB1B /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEE227BEEFDA003DAB1B /* ContainerView.swift */; };
-		8FF0AEE627BEF114003DAB1B /* ContainerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEE527BEF114003DAB1B /* ContainerConfiguration.swift */; };
 		8FF0AEE927BF03E7003DAB1B /* ExampleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEE827BF03E7003DAB1B /* ExampleSectionView.swift */; };
 		8FF0AEF227BF14AA003DAB1B /* ExampleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEF127BF14AA003DAB1B /* ExampleSection.swift */; };
-		8FFA17DA27C3EAC600210D5D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA17D927C3EAC600210D5D /* Router.swift */; };
-		8FFA17DF27C4E78B00210D5D /* DiffableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA17DE27C4E78B00210D5D /* DiffableModel.swift */; };
+		8FF2806A27CFBEF200A8EA4B /* JKListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF2806927CFBEF200A8EA4B /* JKListKit */; };
 		8FFA17E227C4E97500210D5D /* SectionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA17E127C4E97500210D5D /* SectionConstants.swift */; };
 		8FFA17E827C4F76600210D5D /* ExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA17E727C4F76600210D5D /* ExamplePresenter.swift */; };
 /* End PBXBuildFile section */
@@ -45,13 +35,17 @@
 			remoteGlobalIDString = 8FF0AEAA27BEEDE7003DAB1B;
 			remoteInfo = JKListKit;
 		};
+		8FF2805627CFBAA600A8EA4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FF0AEA327BEEDE7003DAB1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FF0AEAA27BEEDE7003DAB1B;
+			remoteInfo = JKListKitExampleApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F219C8C27C396FA00E8E951 /* BaseSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSectionController.swift; sourceTree = "<group>"; };
-		8F219C8E27C3976400E8E951 /* BaseSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSection.swift; sourceTree = "<group>"; };
-		8F219C9027C3988500E8E951 /* SectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionAdapter.swift; sourceTree = "<group>"; };
-		8FF0AEAB27BEEDE7003DAB1B /* JKListKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKListKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF0AEAB27BEEDE7003DAB1B /* JKListKitExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKListKitExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF0AEAE27BEEDE7003DAB1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FF0AEB027BEEDE7003DAB1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8FF0AEB227BEEDE7003DAB1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,18 +53,12 @@
 		8FF0AEB727BEEDE8003DAB1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FF0AEBA27BEEDE8003DAB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FF0AEBC27BEEDE8003DAB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FF0AEC127BEEDE8003DAB1B /* JKListKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FF0AEC527BEEDE8003DAB1B /* JKListKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKListKitTests.swift; sourceTree = "<group>"; };
-		8FF0AECB27BEEDE8003DAB1B /* JKListKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FF0AECF27BEEDE8003DAB1B /* JKListKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKListKitUITests.swift; sourceTree = "<group>"; };
-		8FF0AED127BEEDE8003DAB1B /* JKListKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKListKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8FF0AEE027BEEEBC003DAB1B /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		8FF0AEE227BEEFDA003DAB1B /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
-		8FF0AEE527BEF114003DAB1B /* ContainerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerConfiguration.swift; sourceTree = "<group>"; };
+		8FF0AEC127BEEDE8003DAB1B /* JKListKitExampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitExampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF0AECB27BEEDE8003DAB1B /* JKListKitExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF0AEE827BF03E7003DAB1B /* ExampleSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSectionView.swift; sourceTree = "<group>"; };
 		8FF0AEF127BF14AA003DAB1B /* ExampleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSection.swift; sourceTree = "<group>"; };
-		8FFA17D927C3EAC600210D5D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		8FFA17DE27C4E78B00210D5D /* DiffableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableModel.swift; sourceTree = "<group>"; };
+		8FF2805227CFBAA600A8EA4B /* JKListKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF2806727CFBC4D00A8EA4B /* JKListKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = JKListKit; path = JKListKitTests/JKListKit; sourceTree = "<group>"; };
 		8FFA17E127C4E97500210D5D /* SectionConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionConstants.swift; sourceTree = "<group>"; };
 		8FFA17E727C4F76600210D5D /* ExamplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FF2806A27CFBEF200A8EA4B /* JKListKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,44 +86,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FF2804F27CFBAA600A8EA4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8F219C8B27C396F000E8E951 /* Sections */ = {
-			isa = PBXGroup;
-			children = (
-				8F219C8C27C396FA00E8E951 /* BaseSectionController.swift */,
-				8F219C8E27C3976400E8E951 /* BaseSection.swift */,
-				8F219C9027C3988500E8E951 /* SectionAdapter.swift */,
-			);
-			path = Sections;
-			sourceTree = "<group>";
-		};
 		8FF0AEA227BEEDE7003DAB1B = {
 			isa = PBXGroup;
 			children = (
-				8FF0AEAD27BEEDE7003DAB1B /* JKListKit */,
-				8FF0AEC427BEEDE8003DAB1B /* JKListKitTests */,
-				8FF0AECE27BEEDE8003DAB1B /* JKListKitUITests */,
+				8FF0AEAD27BEEDE7003DAB1B /* JKListKitExampleApp */,
+				8FF2806727CFBC4D00A8EA4B /* JKListKit */,
 				8FF0AEAC27BEEDE7003DAB1B /* Products */,
+				8FF2806827CFBEF200A8EA4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		8FF0AEAC27BEEDE7003DAB1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FF0AEAB27BEEDE7003DAB1B /* JKListKit.app */,
-				8FF0AEC127BEEDE8003DAB1B /* JKListKitTests.xctest */,
-				8FF0AECB27BEEDE8003DAB1B /* JKListKitUITests.xctest */,
+				8FF0AEAB27BEEDE7003DAB1B /* JKListKitExampleApp.app */,
+				8FF0AEC127BEEDE8003DAB1B /* JKListKitExampleAppTests.xctest */,
+				8FF0AECB27BEEDE8003DAB1B /* JKListKitExampleAppUITests.xctest */,
+				8FF2805227CFBAA600A8EA4B /* JKListKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8FF0AEAD27BEEDE7003DAB1B /* JKListKit */ = {
+		8FF0AEAD27BEEDE7003DAB1B /* JKListKitExampleApp */ = {
 			isa = PBXGroup;
 			children = (
 				8FFA17E027C4E91000210D5D /* TestApp */,
-				8FF0AEDE27BEEE9C003DAB1B /* Core */,
 				8FF0AEAE27BEEDE7003DAB1B /* AppDelegate.swift */,
 				8FF0AEB027BEEDE7003DAB1B /* SceneDelegate.swift */,
 				8FF0AEB427BEEDE7003DAB1B /* Main.storyboard */,
@@ -142,45 +128,7 @@
 				8FF0AEB927BEEDE8003DAB1B /* LaunchScreen.storyboard */,
 				8FF0AEBC27BEEDE8003DAB1B /* Info.plist */,
 			);
-			path = JKListKit;
-			sourceTree = "<group>";
-		};
-		8FF0AEC427BEEDE8003DAB1B /* JKListKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				8FF0AEC527BEEDE8003DAB1B /* JKListKitTests.swift */,
-			);
-			path = JKListKitTests;
-			sourceTree = "<group>";
-		};
-		8FF0AECE27BEEDE8003DAB1B /* JKListKitUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8FF0AECF27BEEDE8003DAB1B /* JKListKitUITests.swift */,
-				8FF0AED127BEEDE8003DAB1B /* JKListKitUITestsLaunchTests.swift */,
-			);
-			path = JKListKitUITests;
-			sourceTree = "<group>";
-		};
-		8FF0AEDE27BEEE9C003DAB1B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				8FFA17DD27C4E78300210D5D /* Model */,
-				8FFA17D827C3EABF00210D5D /* Dependencies */,
-				8F219C8B27C396F000E8E951 /* Sections */,
-				8FF0AEDF27BEEEA3003DAB1B /* Views */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		8FF0AEDF27BEEEA3003DAB1B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8FF0AEE027BEEEBC003DAB1B /* ListView.swift */,
-				8FF0AEE227BEEFDA003DAB1B /* ContainerView.swift */,
-				8FF0AEE527BEF114003DAB1B /* ContainerConfiguration.swift */,
-			);
-			path = Views;
+			path = JKListKitExampleApp;
 			sourceTree = "<group>";
 		};
 		8FF0AEE727BF03DF003DAB1B /* Sections */ = {
@@ -201,20 +149,11 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		8FFA17D827C3EABF00210D5D /* Dependencies */ = {
+		8FF2806827CFBEF200A8EA4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FFA17D927C3EAC600210D5D /* Router.swift */,
 			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		8FFA17DD27C4E78300210D5D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8FFA17DE27C4E78B00210D5D /* DiffableModel.swift */,
-			);
-			path = Model;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8FFA17E027C4E91000210D5D /* TestApp */ = {
@@ -230,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8FF0AEAA27BEEDE7003DAB1B /* JKListKit */ = {
+		8FF0AEAA27BEEDE7003DAB1B /* JKListKitExampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FF0AED527BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKit" */;
+			buildConfigurationList = 8FF0AED527BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitExampleApp" */;
 			buildPhases = (
 				8FF0AEA727BEEDE7003DAB1B /* Sources */,
 				8FF0AEA827BEEDE7003DAB1B /* Frameworks */,
@@ -242,14 +181,17 @@
 			);
 			dependencies = (
 			);
-			name = JKListKit;
+			name = JKListKitExampleApp;
+			packageProductDependencies = (
+				8FF2806927CFBEF200A8EA4B /* JKListKit */,
+			);
 			productName = JKListKit;
-			productReference = 8FF0AEAB27BEEDE7003DAB1B /* JKListKit.app */;
+			productReference = 8FF0AEAB27BEEDE7003DAB1B /* JKListKitExampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FF0AEC027BEEDE8003DAB1B /* JKListKitTests */ = {
+		8FF0AEC027BEEDE8003DAB1B /* JKListKitExampleAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FF0AED827BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitTests" */;
+			buildConfigurationList = 8FF0AED827BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitExampleAppTests" */;
 			buildPhases = (
 				8FF0AEBD27BEEDE8003DAB1B /* Sources */,
 				8FF0AEBE27BEEDE8003DAB1B /* Frameworks */,
@@ -260,14 +202,14 @@
 			dependencies = (
 				8FF0AEC327BEEDE8003DAB1B /* PBXTargetDependency */,
 			);
-			name = JKListKitTests;
+			name = JKListKitExampleAppTests;
 			productName = JKListKitTests;
-			productReference = 8FF0AEC127BEEDE8003DAB1B /* JKListKitTests.xctest */;
+			productReference = 8FF0AEC127BEEDE8003DAB1B /* JKListKitExampleAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8FF0AECA27BEEDE8003DAB1B /* JKListKitUITests */ = {
+		8FF0AECA27BEEDE8003DAB1B /* JKListKitExampleAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FF0AEDB27BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitUITests" */;
+			buildConfigurationList = 8FF0AEDB27BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitExampleAppUITests" */;
 			buildPhases = (
 				8FF0AEC727BEEDE8003DAB1B /* Sources */,
 				8FF0AEC827BEEDE8003DAB1B /* Frameworks */,
@@ -278,10 +220,28 @@
 			dependencies = (
 				8FF0AECD27BEEDE8003DAB1B /* PBXTargetDependency */,
 			);
-			name = JKListKitUITests;
+			name = JKListKitExampleAppUITests;
 			productName = JKListKitUITests;
-			productReference = 8FF0AECB27BEEDE8003DAB1B /* JKListKitUITests.xctest */;
+			productReference = 8FF0AECB27BEEDE8003DAB1B /* JKListKitExampleAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8FF2805127CFBAA600A8EA4B /* JKListKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF2806627CFBAA600A8EA4B /* Build configuration list for PBXNativeTarget "JKListKitTests" */;
+			buildPhases = (
+				8FF2804E27CFBAA600A8EA4B /* Sources */,
+				8FF2804F27CFBAA600A8EA4B /* Frameworks */,
+				8FF2805027CFBAA600A8EA4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FF2805727CFBAA600A8EA4B /* PBXTargetDependency */,
+			);
+			name = JKListKitTests;
+			productName = JKListKitTests;
+			productReference = 8FF2805227CFBAA600A8EA4B /* JKListKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -304,9 +264,13 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 8FF0AEAA27BEEDE7003DAB1B;
 					};
+					8FF2805127CFBAA600A8EA4B = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 8FF0AEAA27BEEDE7003DAB1B;
+					};
 				};
 			};
-			buildConfigurationList = 8FF0AEA627BEEDE7003DAB1B /* Build configuration list for PBXProject "JKListKit" */;
+			buildConfigurationList = 8FF0AEA627BEEDE7003DAB1B /* Build configuration list for PBXProject "JKListKitExampleApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,9 +283,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8FF0AEAA27BEEDE7003DAB1B /* JKListKit */,
-				8FF0AEC027BEEDE8003DAB1B /* JKListKitTests */,
-				8FF0AECA27BEEDE8003DAB1B /* JKListKitUITests */,
+				8FF0AEAA27BEEDE7003DAB1B /* JKListKitExampleApp */,
+				8FF0AEC027BEEDE8003DAB1B /* JKListKitExampleAppTests */,
+				8FF0AECA27BEEDE8003DAB1B /* JKListKitExampleAppUITests */,
+				8FF2805127CFBAA600A8EA4B /* JKListKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -351,6 +316,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FF2805027CFBAA600A8EA4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -358,19 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F219C9127C3988500E8E951 /* SectionAdapter.swift in Sources */,
 				8FF0AEF227BF14AA003DAB1B /* ExampleSection.swift in Sources */,
-				8FF0AEE327BEEFDA003DAB1B /* ContainerView.swift in Sources */,
-				8FF0AEE127BEEEBC003DAB1B /* ListView.swift in Sources */,
 				8FF0AEB327BEEDE7003DAB1B /* ViewController.swift in Sources */,
 				8FFA17E227C4E97500210D5D /* SectionConstants.swift in Sources */,
 				8FF0AEAF27BEEDE7003DAB1B /* AppDelegate.swift in Sources */,
-				8F219C8D27C396FA00E8E951 /* BaseSectionController.swift in Sources */,
-				8FF0AEE627BEF114003DAB1B /* ContainerConfiguration.swift in Sources */,
 				8FFA17E827C4F76600210D5D /* ExamplePresenter.swift in Sources */,
-				8FFA17DA27C3EAC600210D5D /* Router.swift in Sources */,
-				8FFA17DF27C4E78B00210D5D /* DiffableModel.swift in Sources */,
-				8F219C8F27C3976400E8E951 /* BaseSection.swift in Sources */,
 				8FF0AEE927BF03E7003DAB1B /* ExampleSectionView.swift in Sources */,
 				8FF0AEB127BEEDE7003DAB1B /* SceneDelegate.swift in Sources */,
 			);
@@ -380,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF0AEC627BEEDE8003DAB1B /* JKListKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,8 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF0AED227BEEDE8003DAB1B /* JKListKitUITestsLaunchTests.swift in Sources */,
-				8FF0AED027BEEDE8003DAB1B /* JKListKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FF2804E27CFBAA600A8EA4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,13 +366,18 @@
 /* Begin PBXTargetDependency section */
 		8FF0AEC327BEEDE8003DAB1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8FF0AEAA27BEEDE7003DAB1B /* JKListKit */;
+			target = 8FF0AEAA27BEEDE7003DAB1B /* JKListKitExampleApp */;
 			targetProxy = 8FF0AEC227BEEDE8003DAB1B /* PBXContainerItemProxy */;
 		};
 		8FF0AECD27BEEDE8003DAB1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8FF0AEAA27BEEDE7003DAB1B /* JKListKit */;
+			target = 8FF0AEAA27BEEDE7003DAB1B /* JKListKitExampleApp */;
 			targetProxy = 8FF0AECC27BEEDE8003DAB1B /* PBXContainerItemProxy */;
+		};
+		8FF2805727CFBAA600A8EA4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FF0AEAA27BEEDE7003DAB1B /* JKListKitExampleApp */;
+			targetProxy = 8FF2805627CFBAA600A8EA4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,7 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JKListKit/Info.plist;
+				INFOPLIST_FILE = JKListKitExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -579,7 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JKListKit/Info.plist;
+				INFOPLIST_FILE = JKListKitExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -613,7 +586,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKListKit.app/JKListKit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKListKitExampleApp.app/JKListKitExampleApp";
 			};
 			name = Debug;
 		};
@@ -632,7 +605,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKListKit.app/JKListKit";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKListKitExampleApp.app/JKListKitExampleApp";
 			};
 			name = Release;
 		};
@@ -670,10 +643,44 @@
 			};
 			name = Release;
 		};
+		8FF2806327CFBAA600A8EA4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.javff.JKListKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKListKitExampleApp.app/JKListKitExampleApp";
+			};
+			name = Debug;
+		};
+		8FF2806427CFBAA600A8EA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.javff.JKListKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKListKitExampleApp.app/JKListKitExampleApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8FF0AEA627BEEDE7003DAB1B /* Build configuration list for PBXProject "JKListKit" */ = {
+		8FF0AEA627BEEDE7003DAB1B /* Build configuration list for PBXProject "JKListKitExampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FF0AED327BEEDE8003DAB1B /* Debug */,
@@ -682,7 +689,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FF0AED527BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKit" */ = {
+		8FF0AED527BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitExampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FF0AED627BEEDE8003DAB1B /* Debug */,
@@ -691,7 +698,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FF0AED827BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitTests" */ = {
+		8FF0AED827BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitExampleAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FF0AED927BEEDE8003DAB1B /* Debug */,
@@ -700,7 +707,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FF0AEDB27BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitUITests" */ = {
+		8FF0AEDB27BEEDE8003DAB1B /* Build configuration list for PBXNativeTarget "JKListKitExampleAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FF0AEDC27BEEDE8003DAB1B /* Debug */,
@@ -709,7 +716,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8FF2806627CFBAA600A8EA4B /* Build configuration list for PBXNativeTarget "JKListKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF2806327CFBAA600A8EA4B /* Debug */,
+				8FF2806427CFBAA600A8EA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FF2806927CFBEF200A8EA4B /* JKListKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JKListKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FF0AEA327BEEDE7003DAB1B /* Project object */;
 }

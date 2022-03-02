@@ -15,16 +15,18 @@ protocol ListViewProtocol: AnyObject {
     func insertSection(_ section: BaseSectionDataProtocol, at index: Int)
 }
 
-class ListView: UIView {
+public final class ListView: UIView {
 
-    let containerView: ContainerView = {
-        let view = ContainerView(configuration: .init(spacing: 16))
+    lazy var containerView: ContainerView = {
+        let view = ContainerView(configuration: configuration)
         return view
     }()
 
-    weak var adapter: SectionAdapterProtocol?
+    public weak var adapter: SectionAdapterProtocol?
+    private let configuration: ContainerConfiguration
 
-    init(configuration: ContainerConfiguration) {
+    public init(configuration: ContainerConfiguration) {
+        self.configuration = configuration
         super.init(frame: .zero)
         setupView()
         setupConstraint()
@@ -50,24 +52,24 @@ class ListView: UIView {
 }
 
 extension ListView: ListViewProtocol {
-    func loadSections(_ sections: [BaseSectionDataProtocol]) {
+    public func loadSections(_ sections: [BaseSectionDataProtocol]) {
         containerView.cleanSubViews()
         sections.forEach {
             insertSectionInContainer($0)
         }
     }
 
-    func updateSection(_ section: BaseSectionDataProtocol) {
+    public func updateSection(_ section: BaseSectionDataProtocol) {
         guard let adapter = adapter,
               let sectionController = adapter.find(section: section.identifier) else { return }
         sectionController.updateSection(listView: self, sectionModel: section.data)
     }
 
-    func appendSection(_ section: BaseSectionDataProtocol) {
+    public func appendSection(_ section: BaseSectionDataProtocol) {
         insertSectionInContainer(section)
     }
 
-    func insertSection(_ section: BaseSectionDataProtocol, at index: Int) {
+    public func insertSection(_ section: BaseSectionDataProtocol, at index: Int) {
         insertSectionInContainer(section, at: index)
     }
 
@@ -77,10 +79,12 @@ extension ListView: ListViewProtocol {
         let view = sectionController?.createSection(listView: self, with: section.data)
         guard let view = view else { return }
 
+        let lateralSpacing = sectionController?.lateralSpacing
+
         if let index = index {
-            containerView.insertArrangedSubview(view, at: index)
+            containerView.insertArrangedSubview(view, at: index, with: lateralSpacing)
         } else {
-            containerView.addArrangedSubview(view)
+            containerView.addArrangedSubview(view, with: lateralSpacing)
         }
     }
 }

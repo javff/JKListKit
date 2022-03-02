@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol DiffableModel {
+public protocol DiffableModel {
     
 }

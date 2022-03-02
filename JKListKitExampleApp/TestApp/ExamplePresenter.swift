@@ -1,0 +1,32 @@
+//
+//  ExamplrePresenter.swift
+//  JKListKit
+//
+//  Created by Juan vasquez on 22-02-22.
+//
+
+import JKListKit
+
+protocol ExamplePresenterProtocol: AnyObject {
+    func loadSections()
+    func bindView(_ view: ExampleViewProtocol)
+}
+
+class ExamplePresenter: ExamplePresenterProtocol {
+
+    weak var view: ExampleViewProtocol?
+
+    func loadSections() {
+        let mockData: [BaseSectionData] = [
+            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .red, height: 300)),
+            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .brown, height: 50)),
+            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .green, height: 200)),
+            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .blue, height: 20))
+        ]
+        view?.loadSections(mockData)
+    }
+
+    func bindView(_ view: ExampleViewProtocol) {
+        self.view = view
+    }
+}

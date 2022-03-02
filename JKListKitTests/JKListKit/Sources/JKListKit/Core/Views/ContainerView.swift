@@ -25,13 +25,10 @@ final class ContainerView: UIView {
         return containerView
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-        setupConstraint()
-    }
+    let configuration: ContainerConfiguration
 
     init(configuration: ContainerConfiguration) {
+        self.configuration = configuration
         super.init(frame: .zero)
         setupView()
         setupConstraint()
@@ -42,11 +39,15 @@ final class ContainerView: UIView {
         stackView.spacing = configuration.spacing
     }
 
-    func addArrangedSubview(_ view: UIView) {
+    func addArrangedSubview(_ view: UIView, with lateralSpacing: CGFloat?) {
+        let lateralSpacing = lateralSpacing ?? configuration.lateralSpacing
+        let view = prepareViewBeforeInsert(view, with: lateralSpacing)
         stackView.addArrangedSubview(view)
     }
 
-    func insertArrangedSubview(_ view: UIView, at index: Int) {
+    func insertArrangedSubview(_ view: UIView, at index: Int, with lateralSpacing: CGFloat?) {
+        let lateralSpacing = lateralSpacing ?? configuration.lateralSpacing
+        let view = prepareViewBeforeInsert(view, with: lateralSpacing)
         stackView.insertArrangedSubview(view, at: index)
     }
 
@@ -56,6 +57,20 @@ final class ContainerView: UIView {
         }
     }
 
+    private func prepareViewBeforeInsert(_ view: UIView, with lateralSpacing: CGFloat) -> UIView {
+        let containerView = UIView()
+        containerView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: containerView.topAnchor),
+            view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: lateralSpacing),
+            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: lateralSpacing),
+            view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+
+        ])
+        return containerView
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -63,6 +78,13 @@ final class ContainerView: UIView {
     private func setupView() {
         addSubview(scrollView)
         scrollView.addSubview(stackView)
+
+        scrollView.contentInset = UIEdgeInsets(
+            top: configuration.topInset,
+            left: 0,
+            bottom: configuration.bottomInset,
+            right: 0
+        )
     }
 
     private func setupConstraint() {

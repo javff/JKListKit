@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import JKListKit
 
 protocol ExampleViewProtocol: AnyObject {
     func loadSections(_ sections: [BaseSectionDataProtocol])
@@ -23,7 +24,7 @@ class ViewController: UIViewController {
     }()
 
     lazy var exampleView: ListView = {
-        let view = ListView(configuration: .init(spacing: 16))
+        let view = ListView(configuration: .init(spacing: 16, lateralSpacing: 30))
         view.adapter = adapter
         return view
     }()
@@ -40,14 +41,22 @@ class ViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func loadView() {
-        view = exampleView
-        view.backgroundColor = .white
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         presenter.loadSections()
+    }
+
+    private func setupView() {
+        view.backgroundColor = .white
+        view.addSubview(exampleView)
+        exampleView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            exampleView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            exampleView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            exampleView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            exampleView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
 }
 

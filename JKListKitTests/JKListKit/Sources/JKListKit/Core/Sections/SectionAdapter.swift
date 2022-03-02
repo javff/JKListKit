@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SectionAdapterProtocol: AnyObject {
+public protocol SectionAdapterProtocol: AnyObject {
     var  registeredSections:[String: BaseSectionControllerProtocol.Type]  { get set }
     var  router: RouterProtocol { get }
     func create(section: BaseSectionIdentifierProtocol) -> BaseSectionControllerProtocol?
@@ -15,13 +15,13 @@ protocol SectionAdapterProtocol: AnyObject {
     func find(sectionIndex position: Int) -> BaseSectionControllerProtocol?
 }
 
-class SectionAdapter: NSObject, SectionAdapterProtocol {
+public final class SectionAdapter: NSObject, SectionAdapterProtocol {
 
-    var registeredSections:[String: BaseSectionControllerProtocol.Type] = [:]
-    let router: RouterProtocol
+    public var registeredSections:[String: BaseSectionControllerProtocol.Type] = [:]
+    public let router: RouterProtocol
     private var cacheSections:[BaseSectionControllerProtocol] = []
 
-    init(router: RouterProtocol) {
+    public init(router: RouterProtocol) {
         self.router = router
         super.init()
     }
