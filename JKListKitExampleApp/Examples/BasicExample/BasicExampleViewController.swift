@@ -8,12 +8,12 @@
 import UIKit
 import JKListKit
 
-protocol ExampleViewProtocol: AnyObject {
+protocol BasicExampleViewProtocol: AnyObject {
     func loadSections(_ sections: [BaseSectionDataProtocol])
     func updateSection(_ section: BaseSectionDataProtocol)
 }
 
-class ViewController: UIViewController {
+class BasicExampleViewController: UIViewController {
 
     lazy var adapter: SectionAdapterProtocol = {
         let router = BaseRouter()
@@ -29,9 +29,9 @@ class ViewController: UIViewController {
         return view
     }()
 
-    private let presenter: ExamplePresenterProtocol
+    private let presenter: BasicExamplePresenterProtocol
 
-    init(presenter: ExamplePresenterProtocol) {
+    init(presenter: BasicExamplePresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
         presenter.bindView(self)
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: ExampleViewProtocol {
+extension BasicExampleViewController: BasicExampleViewProtocol {
 
     func loadSections(_ sections: [BaseSectionDataProtocol]) {
         exampleView.loadSections(sections)

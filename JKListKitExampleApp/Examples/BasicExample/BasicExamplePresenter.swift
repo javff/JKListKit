@@ -7,14 +7,14 @@
 
 import JKListKit
 
-protocol ExamplePresenterProtocol: AnyObject {
+protocol BasicExamplePresenterProtocol: AnyObject {
     func loadSections()
-    func bindView(_ view: ExampleViewProtocol)
+    func bindView(_ view: BasicExampleViewProtocol)
 }
 
-class ExamplePresenter: ExamplePresenterProtocol {
+class BasicExamplePresenter: BasicExamplePresenterProtocol {
 
-    weak var view: ExampleViewProtocol?
+    weak var view: BasicExampleViewProtocol?
 
     func loadSections() {
         let mockData: [BaseSectionData] = [
@@ -26,7 +26,7 @@ class ExamplePresenter: ExamplePresenterProtocol {
         view?.loadSections(mockData)
     }
 
-    func bindView(_ view: ExampleViewProtocol) {
+    func bindView(_ view: BasicExampleViewProtocol) {
         self.view = view
     }
 }
