@@ -12,11 +12,17 @@ class ExampleFactory {
         switch example {
         case .basicExample:
             return makeBasicExampleController()
+        case .commerceExample:
+            return makeCommerceExample()
         }
     }
 
     class func makeBasicExampleController() -> UIViewController {
         return BasicExampleViewController(presenter: BasicExamplePresenter())
+    }
+
+    class func makeCommerceExample() -> UIViewController {
+        return CommerceViewController(presenter: CommercePresenter())
     }
 }
 

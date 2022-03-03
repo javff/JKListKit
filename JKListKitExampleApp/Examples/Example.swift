@@ -9,10 +9,12 @@ import Foundation
 
 enum Example: CaseIterable {
     case basicExample
+    case commerceExample
 
     var name: String {
         switch self {
         case .basicExample: return "Basic Example"
+        case .commerceExample: return "E-Commerce Example"
         }
     }
 }

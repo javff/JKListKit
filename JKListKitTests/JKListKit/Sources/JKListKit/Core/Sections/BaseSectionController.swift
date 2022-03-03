@@ -39,7 +39,7 @@ open class BaseSectionController<T: DiffableModel, V: UIView>: NSObject, BaseSec
     }
 
     open func updateSection(listView: ListView, in view: V, model: T) {
-        fatalError("must be override")
+        //Override Only
     }
 
     public func createSection(listView: ListView, with model: DiffableModel) -> UIView {

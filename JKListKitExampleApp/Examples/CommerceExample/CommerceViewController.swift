@@ -1,30 +1,25 @@
 //
-//  ViewController.swift
-//  JKListKit
+//  CommerceViewController.swift
+//  JKListKitExampleApp
 //
-//  Created by Juan vasquez on 17-02-22.
+//  Created by Juan vasquez on 03-03-22.
 //
 
 import UIKit
 import JKListKit
 
-protocol BasicExampleViewProtocol: AnyObject {
-    func loadSections(_ sections: [BaseSectionDataProtocol])
-    func updateSection(_ section: BaseSectionDataProtocol)
-}
-
-class BasicExampleViewController: UIViewController {
+class CommerceViewController: UIViewController {
 
     lazy var adapter: SectionAdapterProtocol = {
         let router = BaseRouter()
         router.controller = self
         let provider = SectionAdapter(router: router)
-        provider.registeredSections = SectionConstants.basicExampleSections
+        provider.registeredSections = SectionConstants.commerceSections
         return provider
     }()
 
     lazy var exampleView: ListView = {
-        let view = ListView(configuration: .init(spacing: 16, lateralSpacing: 30))
+        let view = ListView(configuration: .init(spacing: 35, lateralSpacing: 20))
         view.adapter = adapter
         return view
     }()
@@ -60,7 +55,7 @@ class BasicExampleViewController: UIViewController {
     }
 }
 
-extension BasicExampleViewController: BasicExampleViewProtocol {
+extension CommerceViewController: BasicExampleViewProtocol {
 
     func loadSections(_ sections: [BaseSectionDataProtocol]) {
         exampleView.loadSections(sections)
