@@ -22,7 +22,9 @@ class ExampleFactory {
     }
 
     class func makeCommerceExample() -> UIViewController {
-        return CommerceViewController(presenter: CommercePresenter())
+        let repository = MockCommerceRepository()
+        let presenter = CommercePresenter(repository: repository)
+        return CommerceViewController(presenter: presenter)
     }
 }
 

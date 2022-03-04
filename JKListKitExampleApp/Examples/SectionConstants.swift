@@ -17,6 +17,8 @@ enum SectionConstants {
         "gallery": GallerySection.self,
         "shortDescription": ShortDescriptionSection.self,
         "mainAction": MainActionsSection.self,
-        "descriptionBullet": DescriptionBulletSection.self
+        "descriptionBullet": DescriptionBulletSection.self,
+        "recommendations": RecommendationsSection.self,
+        "verticalGallery": VerticalGallerySection.self
     ]
 }

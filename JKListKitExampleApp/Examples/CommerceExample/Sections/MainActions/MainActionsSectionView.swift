@@ -10,13 +10,13 @@ import UIKit
 class MainActionsSectionView: UIView {
 
     let plusIcon: UIImageView = {
-        let image = UIImage(systemName: "plus")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "plus")?.withTintColor(.grayScaleOff, renderingMode: .alwaysOriginal)
         let imageView = UIImageView(image: image)
         return imageView
     }()
 
     let favoriteIcon: UIImageView = {
-        let image = UIImage(systemName: "heart")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        let image = UIImage(systemName: "heart")?.withTintColor(.grayScaleOff, renderingMode: .alwaysOriginal)
         let imageView = UIImageView(image: image)
         return imageView
     }()
@@ -24,7 +24,7 @@ class MainActionsSectionView: UIView {
     let buttonLabel: UILabel = {
         let label = UILabel()
         label.text = "ADD TO BASKET"
-        label.textColor = .white
+        label.textColor = .grayScaleOff
         return label
     }()
 

@@ -39,7 +39,21 @@ class CommerceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupNavigation()
         presenter.loadSections()
+    }
+
+    private func setupNavigation() {
+        let view = UIView()
+        let imageView = UIImageView(image: UIImage(named: "adidasLogo"))
+        imageView.contentMode = .scaleAspectFit
+        view.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        navigationItem.titleView = view
     }
 
     private func setupView() {

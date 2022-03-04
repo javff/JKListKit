@@ -21,9 +21,13 @@ class BasicExamplePresenter: BasicExamplePresenterProtocol {
             .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .red, height: 300)),
             .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .brown, height: 50)),
             .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .green, height: 200)),
-            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .blue, height: 20))
+            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .blue, height: 20)),
+            .init(identifier: BaseSectionIdentifier(id: "exampleView", type: "example"), data: ExampleSectionModel(color: .yellow, height: 600))
         ]
-        view?.loadSections(mockData)
+
+        Task {
+            await view?.loadSections(mockData)
+        }
     }
 
     func bindView(_ view: BasicExampleViewProtocol) {

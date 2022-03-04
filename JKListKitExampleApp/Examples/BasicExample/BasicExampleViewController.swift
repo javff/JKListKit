@@ -9,8 +9,8 @@ import UIKit
 import JKListKit
 
 protocol BasicExampleViewProtocol: AnyObject {
-    func loadSections(_ sections: [BaseSectionDataProtocol])
-    func updateSection(_ section: BaseSectionDataProtocol)
+    @MainActor func loadSections(_ sections: [BaseSectionDataProtocol])
+    @MainActor func updateSection(_ section: BaseSectionDataProtocol)
 }
 
 class BasicExampleViewController: UIViewController {
@@ -43,6 +43,7 @@ class BasicExampleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Basic Example"
         setupView()
         presenter.loadSections()
     }

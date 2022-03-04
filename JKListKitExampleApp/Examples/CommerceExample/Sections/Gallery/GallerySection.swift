@@ -19,6 +19,7 @@ class GallerySection: BaseSectionController<GallerySectionModel, GallerySectionV
     }
 
     override func updateSection(listView: ListView, in view: GallerySectionView, model: GallerySectionModel) {
-        view.backgroundColor = .red
+        guard let imageName = model.images.first else { return }
+        view.imageView.image = UIImage(named: imageName)
     }
 }

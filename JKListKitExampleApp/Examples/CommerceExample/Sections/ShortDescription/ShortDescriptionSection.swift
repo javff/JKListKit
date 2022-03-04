@@ -16,6 +16,10 @@ struct ShortDescriptionSectionModel: DiffableModel {
 class ShortDescriptionSection: BaseSectionController<ShortDescriptionSectionModel, ShortDescriptionSectionView> {
 
     override func createSection(in listView: ListView, model: ShortDescriptionSectionModel) -> ShortDescriptionSectionView {
-        return ShortDescriptionSectionView()
+        let view = ShortDescriptionSectionView()
+        view.titleLabel.text = model.title
+        view.descriptionLabel.text = model.description
+        view.priceLabel.text = model.price
+        return view
     }
 }

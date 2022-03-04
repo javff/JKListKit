@@ -12,18 +12,26 @@ class ShortDescriptionSectionView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Title"
+        label.font = .fontTheme(size: 16)
+        label.textColor = .grayScaleOn
+        label.numberOfLines = 3
         return label
     }()
 
     let descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "Description"
+        label.font = .fontTheme(size: 16)
+        label.textColor = .grayScaleTitle
+        label.numberOfLines = 3
         return label
     }()
 
     let priceLabel: UILabel = {
         let label = UILabel()
         label.text = "420$"
+        label.font = .fontTheme(size: 18)
+        label.textColor = .primary
         return label
     }()
 

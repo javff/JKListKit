@@ -1,28 +1,42 @@
 //
-//  DescriptionBulletSectionView.swift
+//  RecommendationCell.swift
 //  JKListKitExampleApp
 //
-//  Created by Juan vasquez on 03-03-22.
+//  Created by Juan vasquez on 04-03-22.
 //
 
 import UIKit
 
-class DescriptionBulletSectionView: UIView {
+class RecommendationCell: UICollectionViewCell {
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
-        label.font = .fontTheme(size: 16)
+        label.font = .fontTheme(size: 12)
         label.textColor = .grayScaleOn
         return label
     }()
 
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
-        label.font = .fontTheme(size: 14)
+        label.font = .fontTheme(size: 12)
         label.textColor = .grayScaleTitle
         return label
+    }()
+
+    let priceLabel: UILabel = {
+        let label = UILabel()
+        label.text = "420$"
+        label.font = .fontTheme(size: 15)
+        label.textColor = .primary
+        return label
+    }()
+
+    let imageProductView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
 
     let containerStackView: UIStackView = {
@@ -31,7 +45,7 @@ class DescriptionBulletSectionView: UIView {
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.spacing = 10
+        stackView.spacing = 8
         return stackView
     }()
 
@@ -45,16 +59,19 @@ class DescriptionBulletSectionView: UIView {
     }
 
     private func setupView() {
-
         addSubview(containerStackView)
+        containerStackView.addArrangedSubview(imageProductView)
         containerStackView.addArrangedSubview(titleLabel)
         containerStackView.addArrangedSubview(descriptionLabel)
+        containerStackView.addArrangedSubview(priceLabel)
 
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            containerStackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+
+            imageProductView.heightAnchor.constraint(equalToConstant: 145)
         ])
     }
 }
