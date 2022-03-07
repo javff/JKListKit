@@ -12,3 +12,11 @@ A data-driven UIScrollView + UIStackView framework for building fast and flexibl
 &#128269; | Add new sections with no means for something to break. Adding a new section is 100% safe for your current layout.
 &#128241; | Simply `UIScrollView + UIStackView` at its core
 &#128640; | Extendable API
+
+
+# What can I do with this ?
+
+## Use Cases Examples
+
+https://user-images.githubusercontent.com/18092648/157065353-d8d19e42-88ab-4cf8-935d-eeef1bd24e9a.mov
+
