@@ -32,7 +32,6 @@
 		8FF0AEB327BEEDE7003DAB1B /* BasicExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB227BEEDE7003DAB1B /* BasicExampleViewController.swift */; };
 		8FF0AEB627BEEDE7003DAB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB427BEEDE7003DAB1B /* Main.storyboard */; };
 		8FF0AEB827BEEDE8003DAB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB727BEEDE8003DAB1B /* Assets.xcassets */; };
-		8FF0AEBB27BEEDE8003DAB1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF0AEB927BEEDE8003DAB1B /* LaunchScreen.storyboard */; };
 		8FF0AEE927BF03E7003DAB1B /* ExampleSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEE827BF03E7003DAB1B /* ExampleSectionView.swift */; };
 		8FF0AEF227BF14AA003DAB1B /* ExampleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF0AEF127BF14AA003DAB1B /* ExampleSection.swift */; };
 		8FF2806A27CFBEF200A8EA4B /* JKListKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8FF2806927CFBEF200A8EA4B /* JKListKit */; };
@@ -94,7 +93,6 @@
 		8FF0AEB227BEEDE7003DAB1B /* BasicExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleViewController.swift; sourceTree = "<group>"; };
 		8FF0AEB527BEEDE7003DAB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FF0AEB727BEEDE8003DAB1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8FF0AEBA27BEEDE8003DAB1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FF0AEBC27BEEDE8003DAB1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FF0AEC127BEEDE8003DAB1B /* JKListKitExampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitExampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF0AECB27BEEDE8003DAB1B /* JKListKitExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKListKitExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,7 +261,6 @@
 				8FF0AEB027BEEDE7003DAB1B /* SceneDelegate.swift */,
 				8FF0AEB427BEEDE7003DAB1B /* Main.storyboard */,
 				8FF0AEB727BEEDE8003DAB1B /* Assets.xcassets */,
-				8FF0AEB927BEEDE8003DAB1B /* LaunchScreen.storyboard */,
 				8FF0AEBC27BEEDE8003DAB1B /* Info.plist */,
 				8FF2806E27CFCE6000A8EA4B /* CasesViewController.swift */,
 			);
@@ -445,7 +442,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF0AEBB27BEEDE8003DAB1B /* LaunchScreen.storyboard in Resources */,
 				8F7D4A4A27D28C6200198851 /* TenorSans-Regular.ttf in Resources */,
 				8FF0AEB827BEEDE8003DAB1B /* Assets.xcassets in Resources */,
 				8FF0AEB627BEEDE7003DAB1B /* Main.storyboard in Resources */,
@@ -560,14 +556,6 @@
 				8FF0AEB527BEEDE7003DAB1B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8FF0AEB927BEEDE8003DAB1B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FF0AEBA27BEEDE8003DAB1B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -700,10 +688,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JKListKitExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -728,10 +716,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JKListKitExampleApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

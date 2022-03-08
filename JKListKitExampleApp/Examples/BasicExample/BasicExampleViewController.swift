@@ -15,17 +15,14 @@ protocol BasicExampleViewProtocol: AnyObject {
 
 class BasicExampleViewController: UIViewController {
 
-    lazy var adapter: SectionAdapterProtocol = {
-        let router = BaseRouter()
-        router.controller = self
-        let provider = SectionAdapter(router: router)
-        provider.registeredSections = SectionConstants.basicExampleSections
-        return provider
+    let adapter: ListAdapter = {
+        let factory = SectionTypeFactory(availableSectionTypes: SectionConstants.basicExampleSections)
+        let adapter = ListAdapter(sectionTypeFactory: factory)
+        return adapter
     }()
 
-    lazy var exampleView: ListView = {
+    let exampleView: ListView = {
         let view = ListView(configuration: .init(spacing: 16, lateralSpacing: 30))
-        view.adapter = adapter
         return view
     }()
 
@@ -45,6 +42,7 @@ class BasicExampleViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Basic Example"
         setupView()
+        setupListView()
         presenter.loadSections()
     }
 
@@ -59,15 +57,19 @@ class BasicExampleViewController: UIViewController {
             exampleView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+
+    private func setupListView() {
+        adapter.listView = exampleView
+    }
 }
 
 extension BasicExampleViewController: BasicExampleViewProtocol {
 
     func loadSections(_ sections: [BaseSectionDataProtocol]) {
-        exampleView.loadSections(sections)
+        adapter.loadSections(sections)
     }
 
     func updateSection(_ section: BaseSectionDataProtocol) {
-        exampleView.updateSection(section)
+        adapter.updateSection(section)
     }
 }

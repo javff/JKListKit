@@ -22,7 +22,6 @@ public final class ListView: UIView {
         return view
     }()
 
-    public weak var adapter: SectionAdapterProtocol?
     private let configuration: ContainerConfiguration
 
     public init(configuration: ContainerConfiguration) {
@@ -48,43 +47,5 @@ public final class ListView: UIView {
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
-    }
-}
-
-extension ListView: ListViewProtocol {
-    public func loadSections(_ sections: [BaseSectionDataProtocol]) {
-        containerView.cleanSubViews()
-        sections.forEach {
-            insertSectionInContainer($0)
-        }
-    }
-
-    public func updateSection(_ section: BaseSectionDataProtocol) {
-        guard let adapter = adapter,
-              let sectionController = adapter.find(section: section.identifier) else { return }
-        sectionController.updateSection(listView: self, sectionModel: section.data)
-    }
-
-    public func appendSection(_ section: BaseSectionDataProtocol) {
-        insertSectionInContainer(section)
-    }
-
-    public func insertSection(_ section: BaseSectionDataProtocol, at index: Int) {
-        insertSectionInContainer(section, at: index)
-    }
-
-    private func insertSectionInContainer(_ section: BaseSectionDataProtocol, at index: Int? = nil) {
-        guard let adapter = adapter else { return }
-        let sectionController = adapter.create(section: section.identifier)
-        let view = sectionController?.createSection(listView: self, with: section.data)
-        guard let view = view else { return }
-
-        let lateralSpacing = sectionController?.lateralSpacing
-
-        if let index = index {
-            containerView.insertArrangedSubview(view, at: index, with: lateralSpacing)
-        } else {
-            containerView.addArrangedSubview(view, with: lateralSpacing)
-        }
     }
 }

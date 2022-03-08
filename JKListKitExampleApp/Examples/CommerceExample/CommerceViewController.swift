@@ -10,17 +10,14 @@ import JKListKit
 
 class CommerceViewController: UIViewController {
 
-    lazy var adapter: SectionAdapterProtocol = {
-        let router = BaseRouter()
-        router.controller = self
-        let provider = SectionAdapter(router: router)
-        provider.registeredSections = SectionConstants.commerceSections
-        return provider
+    let adapter: ListAdapter = {
+        let factory = SectionTypeFactory(availableSectionTypes: SectionConstants.commerceSections)
+        let adapter = ListAdapter(sectionTypeFactory: factory)
+        return adapter
     }()
 
-    lazy var exampleView: ListView = {
+    let exampleView: ListView = {
         let view = ListView(configuration: .init(spacing: 35, lateralSpacing: 20))
-        view.adapter = adapter
         return view
     }()
 
@@ -39,8 +36,13 @@ class CommerceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupListView()
         setupNavigation()
         presenter.loadSections()
+    }
+
+    private func setupListView() {
+        adapter.listView = exampleView
     }
 
     private func setupNavigation() {
@@ -72,10 +74,10 @@ class CommerceViewController: UIViewController {
 extension CommerceViewController: BasicExampleViewProtocol {
 
     func loadSections(_ sections: [BaseSectionDataProtocol]) {
-        exampleView.loadSections(sections)
+        adapter.loadSections(sections)
     }
 
     func updateSection(_ section: BaseSectionDataProtocol) {
-        exampleView.updateSection(section)
+        adapter.updateSection(section)
     }
 }

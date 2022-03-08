@@ -13,13 +13,12 @@ public protocol BaseSectionControllerProtocol: AnyObject {
     var lateralSpacing: CGFloat? { get }
     func createSection(listView: ListView, with model: DiffableModel) -> UIView
     func updateSection(listView: ListView, sectionModel: DiffableModel)
-    init(section: BaseSectionIdentifierProtocol, router: RouterProtocol)
+    init(section: BaseSectionIdentifierProtocol)
 }
 
 open class BaseSectionController<T: DiffableModel, V: UIView>: NSObject, BaseSectionControllerProtocol {
 
     public let section: BaseSectionIdentifierProtocol
-    public let router: RouterProtocol
 
     open var lateralSpacing: CGFloat? {
         return nil
@@ -28,9 +27,8 @@ open class BaseSectionController<T: DiffableModel, V: UIView>: NSObject, BaseSec
     //Cache Property
     private var view: UIView?
 
-    required public init(section: BaseSectionIdentifierProtocol, router: RouterProtocol) {
+    required public init(section: BaseSectionIdentifierProtocol) {
         self.section = section
-        self.router = router
         super.init()
     }
 
