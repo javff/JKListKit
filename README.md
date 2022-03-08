@@ -13,6 +13,7 @@ A data-driven UIScrollView + UIStackView framework for building fast and flexibl
 &#128640; | Extendable API
 🔨   | Fully unit tested [WIP]
 🔨   | Lazy Loading [WIP]
+🔨   | DI strategy for SectionController [WIP]
 
 
 # Arquitecture
