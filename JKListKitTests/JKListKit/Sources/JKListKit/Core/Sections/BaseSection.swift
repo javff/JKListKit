@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 public protocol BaseSectionIdentifierProtocol {
     var id: String { get }
