@@ -16,7 +16,7 @@ A data-driven UIScrollView + UIStackView framework for building fast and flexibl
 🔨   | DI strategy for SectionController [WIP]
 
 
-# Arquitecture
+# Architecture
 
 
 ![JKListKitArquitect drawio](https://user-images.githubusercontent.com/18092648/157344408-711c5cc9-984d-4a73-bdc1-522b5c3efbb9.png)
