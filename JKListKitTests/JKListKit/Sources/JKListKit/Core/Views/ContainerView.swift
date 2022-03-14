@@ -9,7 +9,7 @@ import UIKit
 
 final class ContainerView: UIView {
 
-    private let scrollView: UIScrollView = {
+    let scrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.isScrollEnabled = true
         scroll.translatesAutoresizingMaskIntoConstraints = false
@@ -43,12 +43,16 @@ final class ContainerView: UIView {
         let lateralSpacing = lateralSpacing ?? configuration.lateralSpacing
         let view = prepareViewBeforeInsert(view, with: lateralSpacing)
         stackView.addArrangedSubview(view)
+        CATransaction.flush()
+        layoutIfNeeded()
     }
 
     func insertArrangedSubview(_ view: UIView, at index: Int, with lateralSpacing: CGFloat?) {
         let lateralSpacing = lateralSpacing ?? configuration.lateralSpacing
         let view = prepareViewBeforeInsert(view, with: lateralSpacing)
         stackView.insertArrangedSubview(view, at: index)
+        CATransaction.flush()
+        layoutIfNeeded()
     }
 
     func cleanSubViews() {
