@@ -6,12 +6,13 @@
 //
 
 import Foundation
-
+import UIKit
 
 public final class ListAdapter {
 
     public weak var listView: ListView?
-
+    var currentSections: [BaseSectionDataProtocol] = []
+    var loadedSections: [BaseSectionDataProtocol] = []
     let listAdapterUpdater: ListAdapterUpdaterProtocol
     let sectionTypeFactory: SectionTypeFactoryProtocol
 
@@ -23,11 +24,10 @@ public final class ListAdapter {
 }
 
 extension ListAdapter: ListViewProtocol {
+
     public func loadSections(_ sections: [BaseSectionDataProtocol]) {
-        listView?.containerView.cleanSubViews()
-        sections.forEach {
-            insertSectionInContainer($0)
-        }
+        executeFirstLoad(sections)
+        setupOberveForLazyLoad()
     }
 
     public func updateSection(_ section: BaseSectionDataProtocol) {
@@ -44,7 +44,7 @@ extension ListAdapter: ListViewProtocol {
         insertSectionInContainer(section, at: index)
     }
 
-    private func insertSectionInContainer(_ section: BaseSectionDataProtocol, at index: Int? = nil) {
+    func insertSectionInContainer(_ section: BaseSectionDataProtocol, at index: Int? = nil) {
         guard let listView = listView,
               let sectionController = sectionTypeFactory.create(section: section.identifier) else { return }
 

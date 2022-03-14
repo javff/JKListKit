@@ -17,10 +17,33 @@ protocol ListViewProtocol: AnyObject {
 
 public final class ListView: UIView {
 
+    var scrollOffsetObservation: NSKeyValueObservation?
+
     lazy var containerView: ContainerView = {
         let view = ContainerView(configuration: configuration)
+        scrollOffsetObservation = view.scrollView.observe(\.contentOffset, options: .new) { [weak self] scrollView, observeValue in
+            guard let self = self else { return }
+            guard let yOffset = observeValue.newValue?.y else { return }
+            self.contentOffsetChanged?(yOffset)
+        }
         return view
     }()
+
+    var contentHeight: CGFloat {
+        return containerView.scrollView.contentSize.height
+    }
+
+    var frameHeight: CGFloat {
+        return bounds.height
+    }
+
+    var contentOffsetY: CGFloat = .zero
+
+    var contentOffsetChanged: ((CGFloat) -> Void)?
+    
+    public var scrollLoadResistence: CGFloat = 100
+
+    public var preloadSections = 2
 
     private let configuration: ContainerConfiguration
 
@@ -33,6 +56,10 @@ public final class ListView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        scrollOffsetObservation?.invalidate()
     }
 
     private func setupView() {
