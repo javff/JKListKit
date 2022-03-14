@@ -15,6 +15,8 @@ protocol ListViewProtocol: AnyObject {
     func insertSection(_ section: BaseSectionDataProtocol, at index: Int)
 }
 
+
+/// A UI component that makes it easy to create complex layouts based on sections.
 public final class ListView: UIView {
 
     var scrollOffsetObservation: NSKeyValueObservation?
@@ -38,16 +40,18 @@ public final class ListView: UIView {
     }
 
     var contentOffsetY: CGFloat = .zero
-
     var contentOffsetChanged: ((CGFloat) -> Void)?
-    
+    private let configuration: ListViewConfiguration
+
+    /// Value of resistence before starting to load more sections.
     public var scrollLoadResistence: CGFloat = 100
 
+    /// Number of sections to load when ListView needed load more sections.
     public var preloadSections = 2
 
-    private let configuration: ContainerConfiguration
-
-    public init(configuration: ContainerConfiguration) {
+    /// Init of ListView
+    /// - Parameter configuration: ListViewConfiguration that configure initial insets and paddings.
+    public init(configuration: ListViewConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)
         setupView()

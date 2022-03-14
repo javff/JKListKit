@@ -25,9 +25,9 @@ final class ContainerView: UIView {
         return containerView
     }()
 
-    let configuration: ContainerConfiguration
+    let configuration: ListViewConfiguration
 
-    init(configuration: ContainerConfiguration) {
+    init(configuration: ListViewConfiguration) {
         self.configuration = configuration
         super.init(frame: .zero)
         setupView()
@@ -35,8 +35,14 @@ final class ContainerView: UIView {
         setConfiguration(configuration: configuration)
     }
 
-    private func setConfiguration(configuration: ContainerConfiguration) {
+    private func setConfiguration(configuration: ListViewConfiguration) {
         stackView.spacing = configuration.spacing
+        scrollView.contentInset = UIEdgeInsets(
+            top: configuration.topInset,
+            left: 0,
+            bottom: configuration.bottomInset,
+            right: 0
+        )
     }
 
     func addArrangedSubview(_ view: UIView, with lateralSpacing: CGFloat?) {
@@ -82,13 +88,6 @@ final class ContainerView: UIView {
     private func setupView() {
         addSubview(scrollView)
         scrollView.addSubview(stackView)
-
-        scrollView.contentInset = UIEdgeInsets(
-            top: configuration.topInset,
-            left: 0,
-            bottom: configuration.bottomInset,
-            right: 0
-        )
     }
 
     private func setupConstraint() {
