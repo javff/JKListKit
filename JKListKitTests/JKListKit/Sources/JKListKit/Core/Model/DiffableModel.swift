@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// Represents the Payload Data Model of a Section
 public protocol DiffableModel {
     
 }

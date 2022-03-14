@@ -17,7 +17,7 @@ public struct ListViewConfiguration {
     public let bottomInset: CGFloat
 
 
-    ///  Init of ContainerConfiguration
+    ///  Init of ListViewConfiguration
     /// - Parameters:
     ///   - spacing: default CGFloatZero. Define spacing into 
     ///   - lateralSpacing: default is CGFloatZero. Spacing between sections.

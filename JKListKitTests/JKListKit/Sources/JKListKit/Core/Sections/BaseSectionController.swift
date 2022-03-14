@@ -16,10 +16,12 @@ public protocol BaseSectionControllerProtocol: AnyObject {
     init(section: BaseSectionIdentifierProtocol)
 }
 
+/// Represent a Section in the ListView
 open class BaseSectionController<T: DiffableModel, V: UIView>: NSObject, BaseSectionControllerProtocol {
 
     public let section: BaseSectionIdentifierProtocol
 
+    /// Lateral Spacing between the Section and the superview
     open var lateralSpacing: CGFloat? {
         return nil
     }
@@ -27,15 +29,28 @@ open class BaseSectionController<T: DiffableModel, V: UIView>: NSObject, BaseSec
     //Cache Property
     private var view: UIView?
 
+    /// Init of the BaseSectionController
+    /// - Parameter section: a section data model
     required public init(section: BaseSectionIdentifierProtocol) {
         self.section = section
         super.init()
     }
 
+    /// This method must be overridden. Returns the view you want to render for this section.
+    /// - Parameters:
+    ///   - listView: The listView instance
+    ///   - model: The section model instance
+    /// - Returns: The view to render
     open func createSection(in listView: ListView, model: T) -> V {
         fatalError("must be override")
     }
 
+    /// This method must be overridden. this method is called when the view is updated
+    /// Binding the data with the view Here.
+    /// - Parameters:
+    ///   - listView: The ListView instance
+    ///   - view: The view instance
+    ///   - model: The section model instance
     open func updateSection(listView: ListView, in view: V, model: T) {
         //Override Only
     }
