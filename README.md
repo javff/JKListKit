@@ -12,9 +12,10 @@ A data-driven UIScrollView + UIStackView framework for building fast and flexibl
 &#128273; | Set the side margins and the spacing between sections in a centralized way. 100% customizable for each section if necessary.
 &#128269; | Add new sections with no means for something to break. Adding a new section is 100% safe for your current layout.
 &#128241; | Simply `UIScrollView + UIStackView` at its core
+𝌗   | Lazy Loading
+
 &#128640; | Extendable API
 🔨   | Fully unit tested [WIP]
-🔨   | Lazy Loading [WIP]
 🔨   | DI strategy for SectionController [WIP]
 
 
